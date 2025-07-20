@@ -1,22 +1,28 @@
-import java.util.Arrays;
-public class Example {
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
+public class Example {
 
     public static void main(String[] args) {
 
-        int arr[]={10,20,30,50,40,90,80};
-        printArr(arr);
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(20);
+
+
+
+        List<String> syncList = Collections.synchronizedList(new ArrayList<>());
+
 
     }
 
-    private static void printArr(int[] arr) {
-        System.out.print("[");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
-            if(i != arr.length-1){
-                System.out.print(",");
-            }
+    void printCollection(Collection<String> collection) {
+        for (String item : collection) {
+            System.out.println(item);
         }
-        System.out.print("]");
     }
+
+
 }
